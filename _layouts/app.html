@@ -10,6 +10,7 @@
     <!-- Pass app config to JS -->
     <script>
         window.APP_CONFIG = {
+            baseurl: "{{ site.baseurl }}",
             slug: "{{ app.slug }}",
             tagline: {
                 en: "{{ app.tagline.en }}",

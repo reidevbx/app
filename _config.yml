@@ -1,7 +1,8 @@
 # Jekyll Configuration for App Landing Pages
 title: App Landing Pages
 description: Landing pages for mobile applications
-url: "" # GitHub Pages will set this automatically
+url: "https://reidevbx.github.io"
+baseurl: "/app"  # repo name
 
 # Build settings
 markdown: kramdown
