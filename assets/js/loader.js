@@ -1,29 +1,62 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Get app config from Jekyll (injected in layout)
+    const config = window.APP_CONFIG || {};
+
     // 1. Determine current page and language
     const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || 'zh'; // Default to Chinese
-    
+
     // Get filename without extension (e.g., "terms" from "/terms.html")
     const path = window.location.pathname;
     const page = path.substring(path.lastIndexOf('/') + 1).replace('.html', '') || 'index';
 
-    // 2. Update Language Toggles
-    const zhLink = document.getElementById('lang-zh');
-    const enLink = document.getElementById('lang-en');
-    
-    if (zhLink) zhLink.href = `?lang=zh`;
-    if (enLink) enLink.href = `?lang=en`;
+    // Default to English for index page, Chinese for others
+    const defaultLang = (page === 'index') ? 'en' : 'zh';
+    const lang = urlParams.get('lang') || defaultLang;
 
-    // Highlight active language
-    if (lang === 'zh') {
-        if (zhLink) zhLink.classList.add('font-bold', 'underline');
-    } else {
-        if (enLink) enLink.classList.add('font-bold', 'underline');
+    // 2. Setup Language Selector
+    const langSelector = document.getElementById('lang-selector');
+    if (langSelector) {
+        // Set current language
+        langSelector.value = lang;
+
+        // Handle language change
+        langSelector.addEventListener('change', (e) => {
+            const newLang = e.target.value;
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', newLang);
+            window.location.href = url.toString();
+        });
     }
 
-    // 3. Fetch and Render Markdown
-    const mdFile = `${page}.${lang}.md`;
-    
+    // 3. Update Header Tagline (use config from Jekyll)
+    const tagline = document.getElementById('header-tagline');
+    if (tagline && config.tagline) {
+        tagline.textContent = config.tagline[lang] || config.tagline.en;
+    }
+
+    // 4. Update Nav Links for i18n and preserve language
+    const navPrivacy = document.getElementById('nav-privacy');
+    const navTerms = document.getElementById('nav-terms');
+
+    // Add language parameter to nav links
+    if (navPrivacy) navPrivacy.href = `privacy.html?lang=${lang}`;
+    if (navTerms) navTerms.href = `terms.html?lang=${lang}`;
+
+    // Update text for Chinese
+    if (lang === 'zh') {
+        if (navPrivacy) navPrivacy.textContent = '隱私權政策';
+        if (navTerms) navTerms.textContent = '服務條款';
+    }
+
+    // Hide separator before language selector (keep nav clean)
+    const langSeparator = document.querySelector('.lang-separator');
+    if (langSeparator) {
+        langSeparator.style.display = 'none';
+    }
+
+    // 5. Fetch and Render Markdown from markdown/ folder
+    const mdFile = `markdown/${page}.${lang}.md`;
+
     fetch(mdFile)
         .then(response => {
             if (!response.ok) {

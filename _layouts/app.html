@@ -1,0 +1,41 @@
+{% assign app = site.data.apps[page.app_id] %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html app=app %}
+
+    <!-- Loader JS -->
+    <script src="{{ site.baseurl }}/assets/js/loader.js"></script>
+
+    <!-- Pass app config to JS -->
+    <script>
+        window.APP_CONFIG = {
+            slug: "{{ app.slug }}",
+            tagline: {
+                en: "{{ app.tagline.en }}",
+                zh: "{{ app.tagline.zh }}"
+            }
+        };
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+    {% include nav.html app=app %}
+
+    <!-- Main Content -->
+    <main class="flex-grow py-6 px-4 sm:py-10 sm:px-6">
+        <div id="content" class="{{ page.content_class | default: 'max-w-5xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-sm' }}">
+            {% if page.show_loading %}
+            {% include loading-skeleton.html type=page.loading_type %}
+            {% else %}
+            {{ content }}
+            {% endif %}
+        </div>
+    </main>
+
+    {% if page.show_footer %}
+    {% include footer.html app=app %}
+    {% endif %}
+
+</body>
+</html>

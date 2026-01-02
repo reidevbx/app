@@ -1,0 +1,20 @@
+<nav class="bg-white shadow-sm">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+        <a href="{{ site.baseurl }}/{{ include.app.slug }}/index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity text-left">
+            <img src="{{ site.baseurl }}/assets/images/{{ include.app.slug }}/web-app-manifest-192x192.png" alt="{{ include.app.name }} Logo" class="h-12 w-12 rounded-lg shadow-sm">
+            <div class="flex flex-col">
+                <div class="font-bold text-xl text-gray-800 leading-none">{{ include.app.name }}</div>
+                <div id="header-tagline" class="text-xs text-gray-500 font-normal mt-1 hidden sm:block">{{ include.app.tagline.en }}</div>
+            </div>
+        </a>
+        <div class="text-sm text-gray-600 flex items-center space-x-4">
+            <a id="nav-privacy" href="privacy.html" class="hover:text-blue-600">Privacy</a>
+            <span class="text-gray-300">|</span>
+            <a id="nav-terms" href="terms.html" class="hover:text-blue-600">Terms</a>
+            <select id="lang-selector" class="bg-white border border-gray-300 rounded px-2 py-1 text-sm text-gray-600 hover:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 cursor-pointer">
+                <option value="en">English</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+    </div>
+</nav>

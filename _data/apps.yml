@@ -1,0 +1,18 @@
+# 產品設定檔 - 新增產品只需在此加入一筆資料
+# 然後建立對應的資料夾和 markdown 檔案
+
+crossread:
+  name: CrossRead
+  slug: crossread
+  tagline:
+    en: "Turn articles into crossword puzzles and learn while you play."
+    zh: "將文章轉化為填字遊戲，邊玩邊學。"
+  copyright: "完美像素 PixelPerfect"
+
+demo-product:
+  name: Demo Product
+  slug: demo-product
+  tagline:
+    en: "Your demo product tagline here."
+    zh: "您的示範產品標語。"
+  copyright: "完美像素 PixelPerfect"

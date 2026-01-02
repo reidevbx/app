@@ -1,0 +1,32 @@
+# Jekyll Configuration for App Landing Pages
+title: App Landing Pages
+description: Landing pages for mobile applications
+url: "" # GitHub Pages will set this automatically
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude files from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - .DS_Store
+
+# Default layout settings per product folder
+# app_id 對應 _data/apps.yml 中的 key
+defaults:
+  - scope:
+      path: "crossread"
+    values:
+      layout: app
+      app_id: crossread
+      show_footer: true
+  - scope:
+      path: "demo-product"
+    values:
+      layout: app
+      app_id: demo-product
+      show_footer: true
