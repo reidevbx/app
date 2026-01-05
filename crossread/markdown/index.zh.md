@@ -8,7 +8,7 @@
 <div class="bg-gray-50 p-10 rounded-xl mt-10 text-center">
   <h2 class="text-2xl font-bold mb-4">聯絡我們</h2>
   <p class="mb-2">如果您有任何問題或需要支援，請聯繫我們：</p>
-  <p class="mb-6"><strong><a href="mailto:rei.pxperf@gmail.com" class="text-blue-600 hover:underline">rei.pxperf@gmail.com</a></strong></p>
+  <p class="mb-6"><strong><a href="mailto:rei.devbx@gmail.com" class="text-blue-600 hover:underline">rei.devbx@gmail.com</a></strong></p>
   
   <div class="space-x-4">
     <a href="privacy.html" class="text-blue-600 hover:underline">隱私權政策</a>

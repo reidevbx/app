@@ -20,4 +20,4 @@ You agree not to:
 The service is provided on an "AS IS" basis without warranties of any kind.
 
 ## 5. Contact Us
-If you have any questions about these terms, please contact rei.pxperf@gmail.com.
+If you have any questions about these terms, please contact rei.devbx@gmail.com.

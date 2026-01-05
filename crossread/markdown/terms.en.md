@@ -24,4 +24,4 @@ This application, including its source code and design, is owned by us. The righ
 The service is provided on an "AS IS" basis without warranties of any kind. We do not guarantee that the service will be uninterrupted or error-free. We are not liable for any direct or indirect damages arising from the use of this service.
 
 ## 6. Contact Us
-If you have any questions about these terms, please contact rei.pxperf@gmail.com.
+If you have any questions about these terms, please contact rei.devbx@gmail.com.

@@ -22,4 +22,4 @@ We do not sell or share your personal information with third parties unless requ
 We take reasonable measures to protect your data, but please note that no method of transmission over the internet is 100% secure.
 
 ## 5. Contact Us
-If you have any questions about this privacy policy, please contact rei.pxperf@gmail.com.
+If you have any questions about this privacy policy, please contact rei.devbx@gmail.com.

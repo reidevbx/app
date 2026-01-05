@@ -37,4 +37,4 @@ Since we do not store your personal data, there is no risk of data breach regard
 We may update this Privacy Policy from time to time. Any changes will be posted on this page.
 
 ## 6. Contact Us
-If you have any questions about this privacy policy, please contact rei.pxperf@gmail.com.
+If you have any questions about this privacy policy, please contact rei.devbx@gmail.com.

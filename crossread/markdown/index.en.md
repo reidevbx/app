@@ -8,7 +8,7 @@
 <div class="bg-gray-50 p-10 rounded-xl mt-10 text-center">
   <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
   <p class="mb-2">If you have any questions or support inquiries, please contact us at:</p>
-  <p class="mb-6"><strong><a href="mailto:rei.pxperf@gmail.com" class="text-blue-600 hover:underline">rei.pxperf@gmail.com</a></strong></p>
+  <p class="mb-6"><strong><a href="mailto:rei.devbx@gmail.com" class="text-blue-600 hover:underline">rei.devbx@gmail.com</a></strong></p>
   
   <div class="space-x-4">
     <a href="privacy.html" class="text-blue-600 hover:underline">Privacy Policy</a>
