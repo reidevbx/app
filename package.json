@@ -1,0 +1,8 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "/opt/homebrew/opt/ruby/bin/bundle exec jekyll serve --baseurl '/app'",
+    "build": "/opt/homebrew/opt/ruby/bin/bundle exec jekyll build"
+  }
+}
