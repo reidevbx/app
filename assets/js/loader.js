@@ -56,7 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Fetch and Render Markdown from markdown/ folder
     // Use baseurl for GitHub Pages compatibility
-    const basePath = config.baseurl ? `${config.baseurl}/${config.slug}` : '';
+    // Note: baseurl can be "" (root) or "/app" (subpath)
+    const baseurl = config.baseurl || '';
+    const slug = config.slug || '';
+    const basePath = slug ? `${baseurl}/${slug}` : baseurl;
     const mdFile = `${basePath}/markdown/${page}.${lang}.md`;
 
     fetch(mdFile)
