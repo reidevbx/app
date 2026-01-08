@@ -1,8 +1,8 @@
 # Jekyll Configuration for App Landing Pages
 title: App Landing Pages
 description: Landing pages for mobile applications
-url: "https://reidevbx.github.io"
-baseurl: "/app"  # repo name
+url: "https://app.pxperf.cc"
+baseurl: ""  # 根目錄部署，不需要 baseurl
 
 # Build settings
 markdown: kramdown
